@@ -1,0 +1,75 @@
+@use "./reset";
+
+:root {
+  color-scheme: light;
+  --color-linen: #f9e8d4;
+  --color-tangelo: #d54c15;
+  --color-brown: #663924;
+  --color-ink: #59311f;
+  --color-blue: #8db6c7;
+  --color-surface: #fff9f1;
+  --color-muted: #805c49;
+  --color-border: #dec7af;
+  --color-primary-hover: #b63d0f;
+  --color-button: #c44612;
+  --color-accent-text: #ad3c10;
+  --shadow-card: 0 8px 24px rgb(102 57 36 / 7%);
+  --shadow-panel: 0 18px 48px rgb(102 57 36 / 12%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  --font-geist-sans: "Pretendard", "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+  --font-geist-mono: "Courier New", monospace;
+
+  background: var(--color-linen);
+  color: var(--color-brown);
+  font-family: var(--font-geist-sans);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+::selection {
+  background: var(--color-blue);
+  color: var(--color-brown);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brown);
+  outline-offset: 4px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+}

@@ -1,0 +1,143 @@
+.main {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.title,
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(720px, calc(100% - 32px));
+  margin: 40px auto 24px;
+  border: 1px solid rgb(102 57 36 / 15%);
+  border-radius: 80px 20px 20px 20px;
+  background: var(--color-blue);
+  padding: 40px;
+
+  p {
+    color: var(--color-ink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  h1,
+  h2 {
+    color: var(--color-brown);
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: -1.3px;
+  }
+
+  span {
+    color: var(--color-ink);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface);
+  padding: 24px;
+
+  label {
+    color: var(--color-brown);
+    font-weight: 800;
+  }
+}
+
+.searchBox {
+  display: flex;
+  gap: 12px;
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+
+  input {
+    min-width: 0;
+    min-height: 50px;
+    flex: 1;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: #fffcf7;
+    color: var(--color-brown);
+    padding: 12px 16px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-brown);
+      box-shadow: 0 0 0 3px rgb(141 182 199 / 45%);
+    }
+  }
+
+  button {
+    flex-shrink: 0;
+    min-height: 50px;
+    border-radius: 10px;
+    background: var(--color-button);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: background 180ms ease;
+
+    &:hover:not(:disabled) {
+      background: var(--color-primary-hover);
+    }
+  }
+
+  ~ div {
+    width: min(720px, calc(100% - 32px));
+    margin: 0 auto 100px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-surface);
+    color: var(--color-brown);
+    padding: 28px;
+    box-shadow: var(--shadow-card);
+    line-height: 1.8;
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    p + p {
+      margin-top: 8px;
+    }
+
+    p:nth-of-type(2) {
+      color: var(--color-tangelo);
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .title,
+  .heading {
+    margin-top: 24px;
+    border-top-left-radius: 48px;
+    padding: 30px 24px;
+  }
+
+  .searchBox {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

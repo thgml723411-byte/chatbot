@@ -1,0 +1,68 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  p {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  h1 {
+    color: #111827;
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  span {
+    color: #4b5563;
+    font-size: 17px;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 24px;
+
+  label {
+    color: #111827;
+    font-weight: 800;
+  }
+}
+
+.searchBox {
+  display: flex;
+  gap: 10px;
+
+  input {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  button {
+    border: 0;
+    border-radius: 8px;
+    background: #111827;
+    color: #ffffff;
+    padding: 0 16px;
+    font-weight: 800;
+  }
+}
