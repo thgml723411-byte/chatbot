@@ -14,4 +14,7 @@ export type AiRequest = {
 
 export type AiResponse = {
     answer : string
+    quesion? : string
+    questionAns? : string
+    hint? : string
 }

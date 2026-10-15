@@ -3,10 +3,6 @@ import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 // 제공된 질문과 rag파일을 가지고 관련 단원을 검색
 const searchGuide = (question: string, guideText: string) => {
   const normalize = (text: string) => {
@@ -107,6 +103,17 @@ export const POST = async (req: Request) => {
         { status: 400 },
       );
     }
+
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "OPENAI_API_KEY가 설정되지 않았습니다." },
+        { status: 500 },
+      );
+    }
+
+    const openai = new OpenAI({ apiKey });
 
     const filePath = path.join(
       process.cwd(), // 프로젝트 최상위 폴더의 경로를 가지고 온다

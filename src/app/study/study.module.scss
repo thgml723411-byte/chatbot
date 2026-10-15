@@ -35,6 +35,18 @@
   }
 }
 
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    color: var(--color-brown);
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -61,7 +73,7 @@
     font-weight: 800;
   }
 
-  span {
+  p {
     color: var(--color-muted);
     font-size: 14px;
     line-height: 1.7;
@@ -79,7 +91,7 @@
   padding: 23px;
   box-shadow: 4px 4px 0 rgb(102 57 36 / 14%);
 
-  span {
+  p {
     color: var(--color-ink);
   }
 }
